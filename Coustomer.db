@@ -1,0 +1,9 @@
+create table customer(
+    customer_id int,
+    first_name char(20),
+    last_name char(20),
+    age int,
+    country char(20)
+);
+
+

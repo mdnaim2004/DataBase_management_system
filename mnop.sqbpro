@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="/home/mdnaim2004/mydesk/DataBase_management_system/mnop.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="100"/><column_width id="3" width="1502"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">create table coustomer(
+  coustomer_id int primary key,
+  first_name char(20),
+  last_name char(20),
+  age int,
+  country char(20)
+
+);
+
+
+
+
+</sql><sql name="SQL 4">create table orders(
+  order_id int primary key,
+  items char(20),
+  amount int,
+  country char(20)
+	foreign key (coustomer_id) references coustomer(coustomer_id); 
+);
+
+insert into orders values(1, 'abcd', 4000, 4);
+insert into orders values (2, 'efgh', 5000, 5);
+insert into orders values(3, 'ijk', 6000, 3);
+insert into orders values(4, 'xyz', 8000, 4);
+insert into orders values(5, 'mno', 6000, 1);
+
+select * from orders;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
